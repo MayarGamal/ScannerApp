@@ -193,22 +193,36 @@ namespace ScannerGUI
 
         private void GenerateBtn_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < input_size;)
+            for (int i = 0; i < input_size; )
             {
                 count = 0;
                 temp = string.Empty;
                 if (Is_letter(input[i]) || Is_number(input[i]))
                 {
-                    temp.resize(temp.Length + 1);
-                    temp[count] = input[i];
-                    count++;
+                    char ip = input[i];
+                    string input_s = ip.ToString();
+                    int length = temp.Length;
+                    temp.Insert(length, input_s);
                     i++;
+
+                    /* temp.resize(temp.Length + 1);
+                     temp[count] = input[i];
+                     count++;
+                     i++;*/
+
                     while ((i < input_size) && (Is_letter(input[i]) || Is_number(input[i])))
                     {
-                        temp.resize(temp.Length + 1);
-                        temp[count] = input[i];
+
+                        ip = input[i];
+                        input_s = ip.ToString();
+                        length = temp.Length;
+                        temp.Insert(length, input_s);
                         i++;
-                        count++;
+
+                        /*  temp.resize(temp.Length + 1);
+                          temp[count] = input[i];
+                        
+                          count++;*/
                     }
                     scanner(temp);
                 }
@@ -218,26 +232,48 @@ namespace ScannerGUI
                 }
                 else if (input[i] == ':' || input[i] == '>' || input[i] == '<')
                 {
-                    temp.resize(temp.Length + 1);
-                    temp[count] = input[i];
+
+                    char ip = input[i];
+                    string input_s = ip.ToString();
+                    int length = temp.Length;
+                    temp.Insert(length, input_s);
                     i++;
-                    count++;
+
+                    /*  temp.resize(temp.Length + 1);
+                      temp[count] = input[i];
+                      i++;
+                      count++;*/
+
                     if (input[i] == '=')
                     {
-                        temp.resize(temp.Length + 1);
-                        temp[count] = input[i];
+
+                        ip = input[i];
+                        input_s = ip.ToString();
+                        length = temp.Length;
+                        temp.Insert(length, input_s);
                         i++;
-                        count++;
+
+                        /*  temp.resize(temp.Length + 1);
+                          temp[count] = input[i];
+                          i++;
+                          count++;*/
                     }
                     scanner(temp);
                 }
                 else if (input[i] == '+' || input[i] == '-' || input[i] == ';' || input[i] == '*' || input[i] == '/'
                     || input[i] == '[' || input[i] == ']' || input[i] == '(' || input[i] == ')' || input[i] == '=')
                 {
-                    temp.resize(temp.Length + 1);
-                    temp[count] = input[i];
+
+                    char ip = input[i];
+                    string input_s = ip.ToString();
+                    int length = temp.Length;
+                    temp.Insert(length, input_s);
                     i++;
-                    count++;
+
+                    /* temp.resize(temp.Length + 1);
+                     temp[count] = input[i];
+                     i++;
+                     count++;*/
                     scanner(temp);
                 }
                 else if (input[i] == '{')
@@ -263,5 +299,6 @@ namespace ScannerGUI
 
         }
     }
-
 }
+
+
