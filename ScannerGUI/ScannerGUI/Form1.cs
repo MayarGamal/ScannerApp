@@ -199,13 +199,13 @@ namespace ScannerGUI
                 temp = string.Empty;
                 if (Is_letter(input[i]) || Is_number(input[i]))
                 {
-                    temp.resize(temp.length() + 1);
+                    temp.resize(temp.Length + 1);
                     temp[count] = input[i];
                     count++;
                     i++;
                     while ((i < input_size) && (Is_letter(input[i]) || Is_number(input[i])))
                     {
-                        temp.resize(temp.length() + 1);
+                        temp.resize(temp.Length + 1);
                         temp[count] = input[i];
                         i++;
                         count++;
