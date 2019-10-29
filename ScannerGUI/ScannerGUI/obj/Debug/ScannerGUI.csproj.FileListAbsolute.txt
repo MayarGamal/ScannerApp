@@ -3,3 +3,10 @@ C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\bin\Debug\Scann
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.csprojResolveAssemblyReference.cache
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.Properties.Resources.resources
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.csproj.GenerateResource.Cache
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\bin\Debug\ScannerGUI.exe
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\bin\Debug\ScannerGUI.pdb
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.ScannerApp.resources
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.Properties.Resources.resources
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.csproj.GenerateResource.Cache
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.exe
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.pdb

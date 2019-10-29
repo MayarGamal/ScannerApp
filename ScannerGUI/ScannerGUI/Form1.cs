@@ -193,6 +193,10 @@ namespace ScannerGUI
 
         private void GenerateBtn_Click(object sender, EventArgs e)
         {
+
+            Tokenstext.Text = String.Empty;
+            output.Clear();
+
             for (int i = 0; i < input_size; )
             {
                 count = 0;
@@ -202,7 +206,7 @@ namespace ScannerGUI
                     char ip = input[i];
                     string input_s = ip.ToString();
                     int length = temp.Length;
-                    temp.Insert(length, input_s);
+                   temp = temp.Insert(length, input_s);
                     i++;
 
                     /* temp.resize(temp.Length + 1);
@@ -216,7 +220,7 @@ namespace ScannerGUI
                         ip = input[i];
                         input_s = ip.ToString();
                         length = temp.Length;
-                        temp.Insert(length, input_s);
+                        temp = temp.Insert(length, input_s);
                         i++;
 
                         /*  temp.resize(temp.Length + 1);
@@ -236,7 +240,7 @@ namespace ScannerGUI
                     char ip = input[i];
                     string input_s = ip.ToString();
                     int length = temp.Length;
-                    temp.Insert(length, input_s);
+                   temp = temp.Insert(length, input_s);
                     i++;
 
                     /*  temp.resize(temp.Length + 1);
@@ -250,7 +254,7 @@ namespace ScannerGUI
                         ip = input[i];
                         input_s = ip.ToString();
                         length = temp.Length;
-                        temp.Insert(length, input_s);
+                        temp = temp.Insert(length, input_s);
                         i++;
 
                         /*  temp.resize(temp.Length + 1);
@@ -267,7 +271,7 @@ namespace ScannerGUI
                     char ip = input[i];
                     string input_s = ip.ToString();
                     int length = temp.Length;
-                    temp.Insert(length, input_s);
+                    temp = temp.Insert(length, input_s);
                     i++;
 
                     /* temp.resize(temp.Length + 1);
@@ -292,11 +296,32 @@ namespace ScannerGUI
                     break;
                 }
             }
+
+
+            for (int i = 0; i < output.Count; i++)
+            {
+                
+                string value = output[i];
+
+                Tokenstext.Text += value + "\r\n";
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Tokenstext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetbtn_Click(object sender, EventArgs e)
+        {
+            Tokenstext.Text = String.Empty;
+            InputText.Text = String.Empty;
         }
     }
 }
