@@ -149,14 +149,25 @@ namespace ScannerGUI
             }
             else if (s == "<")
             {
-                output.Add("<\tAngel bracket");
+                output.Add("<\tAngle bracket");
             }
             else if (s == ">")
             {
-                output.Add(">\tAngel bracket");
+                output.Add(">\tAngle bracket");
             }
             else if (Is_letter(s[0]))
             {
+                for (int i = 1; i < s.Length; i++)
+                {
+                    if (!Is_letter(s[i]))
+                    {
+                        my_error = true;
+                    }
+                    /*else
+                    {
+                        output.Add(s + "\tidentifier");
+                    }*/
+                }
                 output.Add(s + "\tidentifier");
             }
             else if (Is_number(s[0]))
@@ -166,14 +177,17 @@ namespace ScannerGUI
                     if (!Is_number(s[i]))
                     {
                         my_error = true;
-
+                      
                     }
                 }
+
                 output.Add(s + "\tnumber");
             }
             else
             {
                 my_error = true;
+               
+
             }
 
         }
@@ -215,6 +229,34 @@ namespace ScannerGUI
                      i++;*/
 
                     while ((i < input_size) && (Is_letter(input[i]) || Is_number(input[i])))
+                    {
+
+                        ip = input[i];
+                        input_s = ip.ToString();
+                        length = temp.Length;
+                        temp = temp.Insert(length, input_s);
+                        i++;
+
+                        /*  temp.resize(temp.Length + 1);
+                          temp[count] = input[i];
+                        
+                          count++;*/
+                    }
+                    scanner(temp);
+                }else if (Is_number(input[i]))
+                {
+                    char ip = input[i];
+                    string input_s = ip.ToString();
+                    int length = temp.Length;
+                    temp = temp.Insert(length, input_s);
+                    i++;
+
+                    /* temp.resize(temp.Length + 1);
+                     temp[count] = input[i];
+                     count++;
+                     i++;*/
+
+                    while ( Is_number(input[i]))
                     {
 
                         ip = input[i];
@@ -297,13 +339,19 @@ namespace ScannerGUI
                 }
             }
 
-
-            for (int i = 0; i < output.Count; i++)
+            if (my_error)
             {
-                
-                string value = output[i];
-
-                Tokenstext.Text += value + "\r\n";
+                string value = "ERROR!!!";
+                Tokenstext.Text = value ;
+                my_error = false;
+            }
+            else
+            {
+                for (int i = 0 ; i < output.Count; i++)
+                {
+                    string value = output[i];
+                    Tokenstext.Text += value + "\r\n";
+                }
             }
             
         }
