@@ -282,7 +282,7 @@ namespace ScannerGUI
                     char ip = input[i];
                     string input_s = ip.ToString();
                     int length = temp.Length;
-                   temp = temp.Insert(length, input_s);
+                    temp = temp.Insert(length, input_s);
                     i++;
 
                     /*  temp.resize(temp.Length + 1);
@@ -290,7 +290,7 @@ namespace ScannerGUI
                       i++;
                       count++;*/
 
-                    if (input[i] == '=')
+                    if (i < input_size && input[i] == '=' )
                     {
 
                         ip = input[i];
@@ -303,6 +303,10 @@ namespace ScannerGUI
                           temp[count] = input[i];
                           i++;
                           count++;*/
+                    }
+                    else
+                    {
+                        my_error = true;
                     }
                     scanner(temp);
                 }
