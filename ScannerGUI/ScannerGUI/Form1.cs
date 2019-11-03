@@ -345,9 +345,9 @@ namespace ScannerGUI
 
             if (my_error)
             {
-                string value = "ERROR!!!";
-                Tokenstext.Text = value ;
-                my_error = false;
+               // string value = "ERROR!!!";
+                MessageBox.Show("ERROR!!!");
+               my_error = false;
             }
             else
             {

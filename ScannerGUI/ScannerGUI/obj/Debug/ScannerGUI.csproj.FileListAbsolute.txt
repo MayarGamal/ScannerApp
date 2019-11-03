@@ -15,3 +15,4 @@ C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\Scann
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\bin\Debug\ScannerGUI.exe
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\bin\Debug\ScannerGUI.pdb
 C:\Users\mayar\Documents\GitHub\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.ScannerApp.resources
+D:\Mayar kolya\ScannerApp\ScannerGUI\ScannerGUI\obj\Debug\ScannerGUI.csprojResolveAssemblyReference.cache
